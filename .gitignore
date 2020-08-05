@@ -1,0 +1,8 @@
+#  Lazarus/Freepascal ignore directives
+backup/
+**/*.ppu
+**/*.o
+**/*.compiled
+**/lib/*
+**/bin/*/*.exe
+

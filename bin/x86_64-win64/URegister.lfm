@@ -1,0 +1,318 @@
+object FRegister: TFRegister
+  Left = 539
+  Height = 380
+  Top = 198
+  Width = 671
+  BorderStyle = bsDialog
+  ClientHeight = 380
+  ClientWidth = 671
+  Color = clGradientActiveCaption
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -12
+  Font.Name = 'Segoe UI Light'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object PannelRegisterInformation: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = pRegistrationlbl
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 20
+    Height = 274
+    Top = 78
+    Width = 631
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 20
+    BorderSpacing.Right = 20
+    BorderSpacing.Bottom = 10
+    ClientHeight = 274
+    ClientWidth = 631
+    Constraints.MinWidth = 631
+    ParentColor = False
+    TabOrder = 0
+    object lblPhoneNumber: TLabel
+      Left = 32
+      Height = 21
+      Top = 16
+      Width = 109
+      BorderSpacing.Left = 20
+      BorderSpacing.Top = 20
+      Caption = 'Phone Number:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lblFullName: TLabel
+      Left = 32
+      Height = 21
+      Top = 48
+      Width = 74
+      Caption = 'Full Name:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lblEmail: TLabel
+      Left = 32
+      Height = 21
+      Top = 80
+      Width = 41
+      Caption = 'Email:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lblAdress: TLabel
+      Left = 32
+      Height = 21
+      Top = 144
+      Width = 59
+      Caption = 'Address:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lblOras: TLabel
+      Left = 32
+      Height = 21
+      Top = 112
+      Width = 36
+      Caption = 'Oras:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object lblJudet: TLabel
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideRight.Side = asrBottom
+      Left = 360
+      Height = 21
+      Top = 112
+      Width = 40
+      Caption = 'Judet:'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnSubmitEdit: TButton
+      Left = 381
+      Height = 41
+      Top = 216
+      Width = 227
+      Caption = 'Submit'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnClick = btnSubmitEditClick
+      ParentFont = False
+      TabOrder = 0
+    end
+    object cbActivRegister: TCheckBox
+      Left = 152
+      Height = 25
+      Top = 232
+      Width = 54
+      Caption = 'Activ'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      OnChange = cbActivRegisterChange
+      ParentFont = False
+      TabOrder = 1
+    end
+    object DBEPhoneNumber: TDBEdit
+      Left = 152
+      Height = 29
+      Top = 16
+      Width = 200
+      DataField = 'PhoneNumber'
+      DataSource = dmQrySQL.dsSQLQryDetails
+      CharCase = ecNormal
+      EditMask = '0000000000;1;_'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 10
+      ParentFont = False
+      TabOrder = 2
+    end
+    object DBFullName: TDBEdit
+      Left = 152
+      Height = 29
+      Top = 48
+      Width = 304
+      DataField = 'FullName'
+      DataSource = dmQrySQL.dsSQLQryDetails
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 3
+    end
+    object DBEmail: TDBEdit
+      Left = 152
+      Height = 29
+      Top = 80
+      Width = 397
+      DataField = 'Email'
+      DataSource = dmQrySQL.dsSQLQryDetails
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 4
+    end
+    object DBOras: TDBEdit
+      Left = 152
+      Height = 29
+      Top = 112
+      Width = 200
+      DataField = 'Oras'
+      DataSource = dmQrySQL.dsSQLQryDetails
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 5
+    end
+    object DBJudet: TDBEdit
+      Left = 421
+      Height = 29
+      Top = 112
+      Width = 128
+      DataField = 'Judet'
+      DataSource = dmQrySQL.dsSQLQryDetails
+      CharCase = ecNormal
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 6
+    end
+    object DBAdress: TDBEdit
+      Left = 152
+      Height = 65
+      Top = 144
+      Width = 397
+      DataField = 'Adress'
+      DataSource = dmQrySQL.dsSQLQryDetails
+      CharCase = ecNormal
+      Constraints.MaxWidth = 631
+      Constraints.MinHeight = 65
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -16
+      Font.Name = '@Malgun Gothic Semilight'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 7
+    end
+  end
+  object pRegistrationlbl: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = PannelRegisterInformation
+    AnchorSideRight.Side = asrCenter
+    AnchorSideBottom.Control = PannelRegisterInformation
+    Left = 20
+    Height = 58
+    Top = 10
+    Width = 630
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 20
+    BorderSpacing.Top = 10
+    BorderSpacing.Right = 20
+    BorderSpacing.Bottom = 10
+    ClientHeight = 58
+    ClientWidth = 630
+    ParentColor = False
+    TabOrder = 1
+    object lblRegistratioForm: TLabel
+      AnchorSideLeft.Control = pRegistrationlbl
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideRight.Control = pRegistrationlbl
+      AnchorSideRight.Side = asrCenter
+      Left = 213
+      Height = 37
+      Top = 8
+      Width = 205
+      Anchors = [akLeft]
+      BorderSpacing.Around = 220
+      Caption = 'Registration form'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+end

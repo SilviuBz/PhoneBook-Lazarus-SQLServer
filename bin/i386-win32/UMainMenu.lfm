@@ -1,0 +1,82 @@
+object FPhoneBook: TFPhoneBook
+  Left = 544
+  Height = 658
+  Top = 169
+  Width = 783
+  Caption = 'Main Menu'
+  ClientHeight = 638
+  ClientWidth = 783
+  Color = clGradientActiveCaption
+  FormStyle = fsMDIForm
+  Menu = MDView
+  OnDestroy = FormDestroy
+  LCLVersion = '2.0.4.0'
+  object Panel1: TPanel
+    Left = 8
+    Height = 616
+    Top = 8
+    Width = 248
+    Caption = 'Panel1'
+    ParentColor = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 264
+    Height = 570
+    Top = 8
+    Width = 512
+    Caption = 'Panel2'
+    ParentColor = False
+    TabOrder = 1
+  end
+  object btnNewPersone: TButton
+    Left = 392
+    Height = 25
+    Top = 599
+    Width = 115
+    Caption = 'New Person'
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 528
+    Height = 25
+    Top = 599
+    Width = 115
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 661
+    Height = 25
+    Top = 599
+    Width = 115
+    Caption = 'Button3'
+    TabOrder = 4
+  end
+  object MDView: TMainMenu
+    left = 264
+    top = 584
+    object MenuItem1: TMenuItem
+      Caption = 'Main Menu'
+    end
+    object mmPhoneBook: TMenuItem
+      Caption = 'Phone Book'
+      object smRegister: TMenuItem
+        Caption = 'Register'
+        OnClick = smRegisterClick
+      end
+    end
+  end
+  object sqlConnection: TMSSQLConnection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'Dataklas'
+    KeepConnection = False
+    Password = 'adfarm'
+    UserName = 'adfarm'
+    HostName = 'TESTE11-SSB\EXT2'
+    left = 312
+    top = 584
+  end
+end

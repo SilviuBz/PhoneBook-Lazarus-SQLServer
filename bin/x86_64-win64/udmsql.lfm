@@ -1,0 +1,40 @@
+object dmSQL: TdmSQL
+  OldCreateOrder = False
+  Height = 401
+  HorizontalOffset = 641
+  VerticalOffset = 274
+  Width = 754
+  object SQLConn: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'Dataklas'
+    KeepConnection = False
+    Password = 'adfarm'
+    Transaction = SQLTran
+    UserName = 'adfarm'
+    HostName = 'TESTE11-SSB\EXT2'
+    ConnectorType = 'MSSQLServer'
+    Left = 40
+    Top = 16
+  end
+  object SQLTran: TSQLTransaction
+    Active = True
+    Database = SQLConn
+    Left = 120
+    Top = 16
+  end
+  object SQLQueryList: TSQLQuery
+    FieldDefs = <>
+    Database = SQLConn
+    Transaction = SQLTran
+    Params = <>
+    Left = 192
+    Top = 16
+  end
+  object SQLDataSource: TDataSource
+    DataSet = SQLQueryList
+    OnDataChange = SQLDataSourceDataChange
+    Left = 280
+    Top = 16
+  end
+end

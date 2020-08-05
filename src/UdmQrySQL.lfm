@@ -1,0 +1,77 @@
+object dmQrySQL: TdmQrySQL
+  OldCreateOrder = False
+  Height = 316
+  HorizontalOffset = 660
+  VerticalOffset = 266
+  Width = 546
+  object SQLQueryList: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    Database = dmConSQL.SQLConn
+    Transaction = dmConSQL.SQLTran
+    SQL.Strings = (
+      ''
+    )
+    DeleteSQL.Strings = (
+      ''
+    )
+    Params = <>
+    Left = 216
+    Top = 16
+  end
+  object dsQryList: TDataSource
+    DataSet = SQLQueryList
+    Left = 16
+    Top = 24
+  end
+  object SQLgetNextID: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'SQLgetNextIDSQLDB1'
+        Attributes = [faReadonly]
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Database = dmConSQL.SQLConn
+    Transaction = dmConSQL.SQLTran
+    SQL.Strings = (
+      'exec GetNextPersonId'
+    )
+    Params = <>
+    Left = 216
+    Top = 88
+  end
+  object dsGetNextID: TDataSource
+    DataSet = SQLgetNextID
+    Left = 16
+    Top = 96
+  end
+  object dsSQLQryDetails: TDataSource
+    DataSet = SQLQryDetails
+    Left = 16
+    Top = 168
+  end
+  object SQLQryDetails: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <>
+    AfterOpen = SQLQryDetailsAfterOpen
+    Database = dmConSQL.SQLConn
+    Transaction = dmConSQL.SQLTran
+    UpdateSQL.Strings = (
+      'Exec dbo.UpdatePersonDetails'
+      ':id,'
+      ':Fullname,'
+      ':PhoneNumber,'
+      ':Email ,'
+      ':Oras,'
+      ':Judet,'
+      ':Adress,'
+      ':Activ'
+    )
+    Params = <>
+    Left = 216
+    Top = 176
+  end
+end

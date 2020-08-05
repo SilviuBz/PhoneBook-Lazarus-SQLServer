@@ -1,0 +1,30 @@
+object dmConSQL: TdmConSQL
+  OldCreateOrder = False
+  Height = 401
+  HorizontalOffset = 641
+  VerticalOffset = 274
+  Width = 754
+  object SQLConn: TSQLConnector
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'Dataklas'
+    KeepConnection = False
+    Params.Strings = (
+      'AUTOCOMMIT=True'
+    )
+    Password = 'adfarm'
+    Transaction = SQLTran
+    UserName = 'adfarm'
+    HostName = 'TESTE11-SSB\EXT2'
+    LogEvents = [detCustom, detPrepare, detExecute, detFetch, detCommit, detRollBack, detParamValue, detActualSQL]
+    ConnectorType = 'MSSQLServer'
+    Left = 40
+    Top = 16
+  end
+  object SQLTran: TSQLTransaction
+    Active = False
+    Database = SQLConn
+    Left = 120
+    Top = 16
+  end
+end
